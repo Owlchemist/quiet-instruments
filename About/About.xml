@@ -5,6 +5,7 @@
 	<packageId>Owlchemist.QuietInstruments</packageId>
 	<supportedVersions>
 		<li>1.3</li>
+		<li>1.4</li>
 	</supportedVersions>
 	<url>https://github.com/Owlchemist/moonlight</url>
 	<description>If you're sick of hearing the same ol' harp solo for the millionth time, this mod allows you to adjust the volume levels of instruments. Simple as that!</description>

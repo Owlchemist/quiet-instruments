@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 	<QuietInstruments.Settings.Volume>Instrument volume (Mod default: {0}, Min: {1}, Max: {2}): </QuietInstruments.Settings.Volume>
+	<QuietInstruments.Settings.Fade>Disable BGM fading</QuietInstruments.Settings.Fade>
+	<QuietInstruments.Settings.Fade.Desc>Normally, when you're near an instrument being played, the background music fades so that you may hear it. If you enable this, this fade is disabled.</QuietInstruments.Settings.Fade.Desc>
 </LanguageData>

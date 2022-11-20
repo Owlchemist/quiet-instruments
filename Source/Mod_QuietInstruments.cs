@@ -2,9 +2,9 @@ using Verse;
 using UnityEngine;
 using HarmonyLib;
 using System;
-using static QuietInstruments.ModSettings_QuietInstruments;
+using static SmartEating.ModSettings_QuietInstruments;
  
-namespace QuietInstruments
+namespace SmartEating
 {
     public class Mod_QuietInstruments : Mod
 	{
@@ -18,8 +18,9 @@ namespace QuietInstruments
 		{
 			Listing_Standard options = new Listing_Standard();
 			options.Begin(inRect);
-			options.Label("QuietInstruments.Settings.Volume".Translate("0","1","1") + Math.Round(volume, 2), -1f, null);
+			options.Label("QuietInstruments.Settings.Volume".Translate("1","0","1") + Math.Round(volume, 2), -1f, null);
 			volume = options.Slider(volume, 0f, 1f);
+			options.CheckboxLabeled("QuietInstruments.Settings.Fade".Translate(), ref fade, "QuietInstruments.Settings.Fade.Desc".Translate());
 			options.End();
 			base.DoSettingsWindowContents(inRect);
 		}
@@ -37,9 +38,11 @@ namespace QuietInstruments
 		public override void ExposeData()
 		{
 			Scribe_Values.Look<float>(ref volume, "volume", 1f, false);
+			Scribe_Values.Look<bool>(ref fade, "fade", false, false);
 			base.ExposeData();
 		}
 
 		public static float volume = 1f;
+		public static bool fade;
 	}
 }
